@@ -1,18 +1,31 @@
 import socket
 import sys
+import time
+import threading
 
-class Cliente:
+class Cliente(threading.Thread):
     direccion_servidor = ()
+    imprimirMensajes = False
+    id = -1
+
+
     # Crear el puerto TCP/IP socket
     puerto = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    numerodos = 32
 
-    def __init__(self, pDireccionServidor, pNumPuerto):
-        self.direccion_servidor = (pDireccionServidor,pNumPuerto)
-        self.numerodos = 2
-        print (str(pNumPuerto))
+    def imprimir(self, mensaje):
+        print("CLIENTE "+ str(self.id) +": " + str(mensaje))
 
-    print(str(numerodos))
-    print (str(len(direccion_servidor)))
+    def __init__(self, pDireccionServidor, pNumPuerto, id, pImprimir_mensajes):
+        super(Cliente, self).__init__()
+        self.direccion_servidor = (pDireccionServidor,pNumPuerto+id)
+        self.imprimirMensajes = pImprimir_mensajes
+        self.id = id
+        self.imprimir("creado. Puerto " + str(self.direccion_servidor[1]))
+
+    def run(self):
+        self.imprimir("durmiendo por " + str(self.id) + " segundos")
+        time.sleep(self.id)
+        self.imprimir("Listo")
+
     #puerto.connect(direccion_servidor)
 
