@@ -11,10 +11,10 @@ IMPRIMIR_MENSAJES_MAIN = True
 fecha = str(datetime.datetime.now()).split(" ")
 hora = fecha[1].split(":")
 nombreArchivoLogging = "Logs/"+fecha[0]+"-"+hora[0]+"-"+hora[1]+"-"+hora[2]+"-log.log"
-numClientes = 10
-direccionServidor = "0.0.0.0"
-puertoInicial = 10000
-
+numClientes = int(input("¿Cuantos clientes desea crear?"))
+direccionServidor = input("Introduzca la direccion del servidor (EJ:localhost)")
+puertoInicial = int(input("¿Cual es el puerto en el que está escuchando el servidor?"))
+segundosEntreThreat = int(input("¿Cada cuantos segundos desea enviar cada uno de los clientes? (ej:3)"))
 logging.basicConfig(filename=nombreArchivoLogging, level=logging.DEBUG)
 
 clientes = []
@@ -28,7 +28,7 @@ def imprimir (mensaje):
 
 imprimir("creando "+ str(numClientes) + " clientes")
 for i in range(numClientes):
-    clienteNuevo = Cliente(direccionServidor, puertoInicial, i, IMPRIMIR_MENSAJES_CLIENTE,nombreArchivoLogging,barrera)
+    clienteNuevo = Cliente(i, IMPRIMIR_MENSAJES_CLIENTE,nombreArchivoLogging,barrera,direccionServidor,puertoInicial,segundosEntreThreat)
     clientes.append(clienteNuevo)
 
 
@@ -46,7 +46,7 @@ barrera.reset()
 
 for i in clientes:
     i.join()
-
+imprimir("Los archivos transferidos exitosamente fueron almacenados en \"archivos_recibidos/clienteX_Y\", donde X es el numero del cliente y Y el nombre original del archivo transferido")
 imprimir("Ejecucion terminada")
 
 

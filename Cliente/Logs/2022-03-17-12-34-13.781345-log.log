@@ -1,0 +1,32 @@
+INFO:root:MAIN: creando 10 clientes
+INFO:root:CLIENTE 0: creado. Entrando en espera
+INFO:root:CLIENTE 1: creado. Entrando en espera
+INFO:root:CLIENTE 2: creado. Entrando en espera
+INFO:root:CLIENTE 3: creado. Entrando en espera
+INFO:root:CLIENTE 4: creado. Entrando en espera
+INFO:root:CLIENTE 5: creado. Entrando en espera
+INFO:root:CLIENTE 6: creado. Entrando en espera
+INFO:root:CLIENTE 7: creado. Entrando en espera
+INFO:root:CLIENTE 8: creado. Entrando en espera
+INFO:root:CLIENTE 9: creado. Entrando en espera
+INFO:root:MAIN: Se han creado correctamente todos los clientes, iniciando las conexiones en 5 segundos. Cada conexion será lanzada con 1 segundo de diferencia
+INFO:root:CLIENTE 0: Iniciando proceso de conexion
+INFO:root:CLIENTE 0: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 0: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 0: Ha fallado el intento de conexion ([Errno 22] Invalid argument)
+INFO:root:CLIENTE 1: Iniciando proceso de conexion
+INFO:root:CLIENTE 1: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 1: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 1: Ha fallado el intento de conexion ([Errno 22] Invalid argument)
+INFO:root:CLIENTE 2: Iniciando proceso de conexion
+INFO:root:CLIENTE 2: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 2: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 2: Ha fallado el intento de conexion ([Errno 22] Invalid argument)
+INFO:root:CLIENTE 3: Iniciando proceso de conexion
+INFO:root:CLIENTE 3: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 3: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 3: Ha fallado el intento de conexion ([Errno 22] Invalid argument)
+INFO:root:CLIENTE 4: Iniciando proceso de conexion
+INFO:root:CLIENTE 4: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 4: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 4: Ha fallado el intento de conexion ([Errno 22] Invalid argument)

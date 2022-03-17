@@ -4,6 +4,7 @@ import time
 import threading
 import tqdm
 import logging
+import traceback
 
 class Cliente(threading.Thread):
 
@@ -11,11 +12,13 @@ class Cliente(threading.Thread):
     BUFFER_SIZE = 4096
     SEPARATOR = "<SEPARATOR>"
 
+    HOST = "localhost"
+    PORT = 10000
+
     # Variables globales
     imprimirMensajes = False
     id = -1
     logging = logging
-    puerto = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Crear el puerto TCP/IP socket
 
     #Esta funcion se encarga de imprimir la informacion en consola cuando es solicitado y realizar el logging
     def imprimir(self, mensaje):
@@ -24,44 +27,47 @@ class Cliente(threading.Thread):
         self.logging.info(msjeAImprimir)
 
     #Constructor 🔧👷🏻‍♂️
-    def __init__(self, pDireccionServidor, pNumPuerto, id, pImprimir_mensajes,nombreArchivoLogging,barrera):
+    def __init__(self, id, pImprimir_mensajes,nombreArchivoLogging,barrera,pdireccion,puertoinicial,segundosEntreThreat):
         super(Cliente, self).__init__()
         self.logging.basicConfig(filename=nombreArchivoLogging, encoding='utf-8', level=logging.DEBUG)
-        self.direccion_servidor = (pDireccionServidor,pNumPuerto)
         self.imprimirMensajes = pImprimir_mensajes
         self.id = id
         self.imprimir("creado. Entrando en espera")
         self.barrera = barrera
-
+        self.puerto = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Crear el puerto TCP/IP socket
+        self.PORT = puertoinicial
+        self.HOST = pdireccion
+        self.segundosEntreThreat=segundosEntreThreat
 
     #Metodo run del super(), ejecutada cuando el thread empieza con el start()
     def run(self):
         self.barrera.wait()
         #self.imprimir("durmiendo por " + str(self.id) + " segundos")
-        time.sleep(self.id)
+        time.sleep(self.segundosEntreThreat)
         self.imprimir("Iniciando proceso de conexion")
         self.realizar_conexion()
 
     #Realiza la conexion al servidor con los parametros establecidos en el contreuctor
     def realizar_conexion(self):
-        self.imprimir("Intentando conectarse a " + str(self.direccion_servidor[0]) + " usando el puerto " + str(self.direccion_servidor[1]))
+        self.imprimir("Intentando conectarse a " + str(self.HOST) + " usando el puerto " + str(self.PORT))
         try:
-            self.puerto.connect(self.direccion_servidor)
+            self.puerto.connect((self.HOST,self.PORT))
             self.imprimir("Conexion exitosa! Esperando al envio")
             self.recibir_archivo()
         except Exception as e:
             self.imprimir("Ha fallado el intento de conexion (" + str(e) + ")")
+            traceback.print_exc()
+
 
     #Escuchar al servidor para recibir el archivo enviado.
     def recibir_archivo(self):
-        self.puerto.listen()
         self.imprimir("Esperando al envio de un archivo")
-        received = self.socket.recv(self.BUFFER_SIZE).decode()
+        received = self.puerto.recv(self.BUFFER_SIZE).decode()
         filename, filesize = received.split(self.SEPARATOR)
         filename = os.path.basename(filename)
         filesize = int(filesize)
         self.imprimir("Recibiendo archivo "+ filename + " de tamaño " + str(filesize))
-        ruta_a_guardar = "archivos_recibidos/cliente"+str(self.id)+"/"+filename
+        ruta_a_guardar = "archivos_recibidos/cliente"+str(self.id)+"_"+filename
         progress = tqdm.tqdm(range(filesize), f"Receiving {filename}", unit="B", unit_scale=True, unit_divisor=1024)
         with open(ruta_a_guardar, "wb") as f:
             while True:
@@ -77,5 +83,4 @@ class Cliente(threading.Thread):
                 progress.update(len(bytes_read))
 
         # close the puerto
-        self.imprimir("Archivo transferido exitosamente y almacenado en " + ruta_a_guardar)
         self.puerto.close()
