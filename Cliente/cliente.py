@@ -73,14 +73,16 @@ class Cliente(threading.Thread):
             while True:
                 # read 1024 bytes from the socket (receive)
                 bytes_read = self.puerto.recv(self.BUFFER_SIZE)
-                if not bytes_read:
-                    # nothing is received
-                    # file transmitting is done
-                    break
+                
                 # write to the file the bytes we just received
                 f.write(bytes_read)
                 # update the progress bar
                 progress.update(len(bytes_read))
+
+                if not bytes_read:
+                    # nothing is received
+                    # file transmitting is done
+                    break
 
         # close the puerto
         self.puerto.close()
