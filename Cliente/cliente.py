@@ -58,7 +58,6 @@ class Cliente(threading.Thread):
             self.imprimir("Ha fallado el intento de conexion (" + str(e) + ")")
             traceback.print_exc()
 
-
     #Escuchar al servidor para recibir el archivo enviado.
     def recibir_archivo(self):
         self.imprimir("Esperando al envio de un archivo")
