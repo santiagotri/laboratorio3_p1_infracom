@@ -10,35 +10,25 @@ import logging
 import datetime
 
 BUFFER_SIZE = 4096
-
-filename = "100MB.bin"
-hash_filename = "hash.txt"
-filesize = os.path.getsize(filename)
 SEPARATOR = "<SEPARATOR>"
 
 # -------------------------------------------------------------------------------------------------
 
-# Python program to find the SHA-1 message digest of a file
-
-# importing the hashlib module
 import hashlib
 
-def hash_file(file):
+def hash_file(filename):
 
-    BLOCK_SIZE = 65536
-    file_hash = hashlib.sha256()
+   h = hashlib.sha1()
 
-    with open(file, 'rb') as f:
+   with open(filename,'rb') as file:
 
-        fb = f.read(BLOCK_SIZE)
+       chunk = 0
+       while chunk != b'':
 
-        while len(fb) > 0:
-            file_hash.update(fb)
-            fb = f.read(BLOCK_SIZE)
+           chunk = file.read(1024)
+           h.update(chunk)
 
-hash_file(hash_filename)
-hash_filesize = os.path.getsize(hash_filename)
-
+   return h.hexdigest()
 # -------------------------------------------------------------------------------------------------
 
 fecha = str(datetime.datetime.now()).split(" ")
@@ -62,77 +52,76 @@ class ClientThread(Thread):
 
         # --> ARCHIVO PRINCIPAL
 
-        self.conn.send(f"{filename}{SEPARATOR}{filesize}".encode())
-        logging.info(f"Enviando el archivo {filename} de tamano {filesize}".encode())
-        
-        progress = tqdm.tqdm(range(filesize), f"Sending {filename}", unit="B", unit_scale=True, unit_divisor=1024)
+        try:
 
-        with open(filename, "rb") as f:
-            
-            while True:
+            self.conn.send(f"{filename}{SEPARATOR}{filesize}".encode())
+            logging.info(f"Enviando el archivo {filename} de tamano {filesize}".encode())
 
-                bytes_read = f.read(BUFFER_SIZE)
+            progress = tqdm.tqdm(range(filesize), f"Sending {filename}", unit="B", unit_scale=True, unit_divisor=1024)
+            print(progress.split("["))
 
-                self.conn.send(bytes_read)
-                progress.update(len(bytes_read))
+            with open(filename, "rb") as f:
 
-                if not bytes_read:
-                    break
+                while True:
 
-        logging.info("Se envio correctamente el archivo principal !")
-        print("Se envio correctamente el archivo principal !")
+                    bytes_read = f.read(BUFFER_SIZE)
 
-        # --> HASH
+                    self.conn.send(bytes_read)
+                    progress.update(len(bytes_read))
 
-        self.conn.send(f"{hash_filename}{SEPARATOR}{hash_filesize}".encode())
-        logging.info(f"Enviando el archivo {hash_filename} de tamano {hash_filesize}".encode())
-        
-        progress = tqdm.tqdm(range(hash_filesize), f"Sending {hash_filename}", unit="B", unit_scale=True, unit_divisor=1024)
+                    if not bytes_read:
+                        break
 
-        with open(hash_filename, "rb") as f:
-            
-            while True:
+            logging.info("Se envio correctamente el archivo principal !")            
 
-                bytes_read = f.read(BUFFER_SIZE)
+        finally:
 
-                self.conn.send(bytes_read)
-                progress.update(len(bytes_read))
+            # --> Hash
 
-                if not bytes_read:
-                    break
+            Hfile = hash_file(filename)
 
-        logging.info("Se envio correctamente el HASH !")
-        print("Se envio correctamente el archivo HASH !")
+            self.conn.send(f"{Hfile}".encode())
+            logging.info("Se envio correctamente el hash del archivo !")
 
-        self.conn.close()
+            self.conn.close()
 
 # --------------------------------------------------------------------------
 
-if len(sys.argv) != 4:
-    print(f"Usage: {sys.argv[0]} <host> <port> <listen>")
+if len(sys.argv) != 5:
+    print(f"Usage: {sys.argv[0]} <host> <port> <listen> <file>")
     sys.exit(1)
  
 HOST, PORT, NUMBER = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
+
+filename = f"{sys.argv[4]}MB.bin"
+filesize = os.path.getsize(filename)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) 
 s.bind((HOST, PORT))
 threads = [] 
  
-while True: 
+try:
 
-    s.listen(NUMBER) 
-    logging.info(f"Server listening in {HOST} {PORT}")
-    print(f"Server listening in {HOST} {PORT}")
+    while True: 
 
-    (conn, (ip,port)) = s.accept() 
-    newthread = ClientThread(ip,port, conn)  
-    threads.append(newthread) 
+        s.listen(NUMBER) 
+        logging.info(f"Server listening in {HOST} {PORT}")
+        print(f"Server listening in {HOST} {PORT}")
 
-    if len(threads) == NUMBER:
+        (conn, (ip,port)) = s.accept() 
+        newthread = ClientThread(ip,port, conn)  
+        threads.append(newthread) 
 
-        for t in threads:
-            t.start()
-        
-        for t in threads:
-            t.join()
+        if len(threads) == NUMBER:
+
+            for t in threads:
+                t.start()
+
+            for t in threads:
+                t.join()
+
+            break
+
+except KeyboardInterrupt:
+    print('Interrupted!')
