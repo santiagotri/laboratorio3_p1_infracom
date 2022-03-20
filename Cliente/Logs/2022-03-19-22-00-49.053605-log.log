@@ -1,0 +1,205 @@
+INFO:root:MAIN: creando 25 clientes
+INFO:root:CLIENTE 0: creado. Entrando en espera
+INFO:root:CLIENTE 1: creado. Entrando en espera
+INFO:root:CLIENTE 2: creado. Entrando en espera
+INFO:root:CLIENTE 3: creado. Entrando en espera
+INFO:root:CLIENTE 4: creado. Entrando en espera
+INFO:root:CLIENTE 5: creado. Entrando en espera
+INFO:root:CLIENTE 6: creado. Entrando en espera
+INFO:root:CLIENTE 7: creado. Entrando en espera
+INFO:root:CLIENTE 8: creado. Entrando en espera
+INFO:root:CLIENTE 9: creado. Entrando en espera
+INFO:root:CLIENTE 10: creado. Entrando en espera
+INFO:root:CLIENTE 11: creado. Entrando en espera
+INFO:root:CLIENTE 12: creado. Entrando en espera
+INFO:root:CLIENTE 13: creado. Entrando en espera
+INFO:root:CLIENTE 14: creado. Entrando en espera
+INFO:root:CLIENTE 15: creado. Entrando en espera
+INFO:root:CLIENTE 16: creado. Entrando en espera
+INFO:root:CLIENTE 17: creado. Entrando en espera
+INFO:root:CLIENTE 18: creado. Entrando en espera
+INFO:root:CLIENTE 19: creado. Entrando en espera
+INFO:root:CLIENTE 20: creado. Entrando en espera
+INFO:root:CLIENTE 21: creado. Entrando en espera
+INFO:root:CLIENTE 22: creado. Entrando en espera
+INFO:root:CLIENTE 23: creado. Entrando en espera
+INFO:root:CLIENTE 24: creado. Entrando en espera
+INFO:root:MAIN: Se han creado correctamente todos los clientes, iniciando las conexiones en 5 segundos. Cada conexion será lanzada con 1 segundo(s) de diferencia
+INFO:root:CLIENTE 0: Iniciando proceso de conexion
+INFO:root:CLIENTE 0: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 0: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 0: Esperando al envio de un archivo
+INFO:root:CLIENTE 1: Iniciando proceso de conexion
+INFO:root:CLIENTE 1: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 1: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 1: Esperando al envio de un archivo
+INFO:root:CLIENTE 2: Iniciando proceso de conexion
+INFO:root:CLIENTE 2: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 2: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 2: Esperando al envio de un archivo
+INFO:root:CLIENTE 3: Iniciando proceso de conexion
+INFO:root:CLIENTE 3: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 3: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 3: Esperando al envio de un archivo
+INFO:root:CLIENTE 4: Iniciando proceso de conexion
+INFO:root:CLIENTE 4: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 4: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 4: Esperando al envio de un archivo
+INFO:root:CLIENTE 5: Iniciando proceso de conexion
+INFO:root:CLIENTE 5: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 5: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 5: Esperando al envio de un archivo
+INFO:root:CLIENTE 6: Iniciando proceso de conexion
+INFO:root:CLIENTE 6: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 6: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 6: Esperando al envio de un archivo
+INFO:root:CLIENTE 7: Iniciando proceso de conexion
+INFO:root:CLIENTE 7: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 7: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 7: Esperando al envio de un archivo
+INFO:root:CLIENTE 8: Iniciando proceso de conexion
+INFO:root:CLIENTE 8: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 8: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 8: Esperando al envio de un archivo
+INFO:root:CLIENTE 9: Iniciando proceso de conexion
+INFO:root:CLIENTE 9: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 9: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 9: Esperando al envio de un archivo
+INFO:root:CLIENTE 10: Iniciando proceso de conexion
+INFO:root:CLIENTE 10: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 10: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 10: Esperando al envio de un archivo
+INFO:root:CLIENTE 11: Iniciando proceso de conexion
+INFO:root:CLIENTE 11: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 11: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 11: Esperando al envio de un archivo
+INFO:root:CLIENTE 12: Iniciando proceso de conexion
+INFO:root:CLIENTE 12: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 12: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 12: Esperando al envio de un archivo
+INFO:root:CLIENTE 13: Iniciando proceso de conexion
+INFO:root:CLIENTE 13: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 13: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 13: Esperando al envio de un archivo
+INFO:root:CLIENTE 14: Iniciando proceso de conexion
+INFO:root:CLIENTE 14: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 14: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 14: Esperando al envio de un archivo
+INFO:root:CLIENTE 15: Iniciando proceso de conexion
+INFO:root:CLIENTE 15: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 15: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 15: Esperando al envio de un archivo
+INFO:root:CLIENTE 16: Iniciando proceso de conexion
+INFO:root:CLIENTE 16: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 16: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 16: Esperando al envio de un archivo
+INFO:root:CLIENTE 17: Iniciando proceso de conexion
+INFO:root:CLIENTE 17: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 17: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 17: Esperando al envio de un archivo
+INFO:root:CLIENTE 18: Iniciando proceso de conexion
+INFO:root:CLIENTE 18: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 18: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 18: Esperando al envio de un archivo
+INFO:root:CLIENTE 19: Iniciando proceso de conexion
+INFO:root:CLIENTE 19: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 19: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 19: Esperando al envio de un archivo
+INFO:root:CLIENTE 20: Iniciando proceso de conexion
+INFO:root:CLIENTE 20: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 20: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 20: Esperando al envio de un archivo
+INFO:root:CLIENTE 21: Iniciando proceso de conexion
+INFO:root:CLIENTE 21: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 21: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 21: Esperando al envio de un archivo
+INFO:root:CLIENTE 22: Iniciando proceso de conexion
+INFO:root:CLIENTE 22: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 22: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 22: Esperando al envio de un archivo
+INFO:root:CLIENTE 23: Iniciando proceso de conexion
+INFO:root:CLIENTE 23: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 23: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 23: Esperando al envio de un archivo
+INFO:root:CLIENTE 24: Iniciando proceso de conexion
+INFO:root:CLIENTE 24: Intentando conectarse a localhost usando el puerto 12345
+INFO:root:CLIENTE 24: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 24: Esperando al envio de un archivo
+INFO:root:CLIENTE 18: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 19: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 0: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 2: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 12: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 10: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 22: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 9: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 14: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 13: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 20: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 15: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 16: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 5: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 3: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 23: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 7: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 6: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 11: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 21: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 1: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 8: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 24: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 4: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 17: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:MAIN: Se han recibido todos los archivos. Se verificará Integridad para cada cliente.
+INFO:root:CLIENTE 5: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 5: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:5.146segundos - Tasa_transferencia_promedio:20374941.807B/s
+INFO:root:CLIENTE 11: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 11: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.988segundos - Tasa_transferencia_promedio:21023944.725B/s
+INFO:root:CLIENTE 4: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 4: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.652segundos - Tasa_transferencia_promedio:22542676.922B/s
+INFO:root:CLIENTE 3: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 3: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.914segundos - Tasa_transferencia_promedio:21336401.987B/s
+INFO:root:CLIENTE 6: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 6: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:5.126segundos - Tasa_transferencia_promedio:20457720.187B/s
+INFO:root:CLIENTE 21: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 21: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.601segundos - Tasa_transferencia_promedio:22790358.75B/s
+INFO:root:CLIENTE 24: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 24: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.503segundos - Tasa_transferencia_promedio:23288709.703B/s
+INFO:root:CLIENTE 23: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 23: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.773segundos - Tasa_transferencia_promedio:21967117.656B/s
+INFO:root:CLIENTE 8: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 8: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.661segundos - Tasa_transferencia_promedio:22498671.022B/s
+INFO:root:CLIENTE 1: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 1: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.742segundos - Tasa_transferencia_promedio:22114210.347B/s
+INFO:root:CLIENTE 17: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 17: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.432segundos - Tasa_transferencia_promedio:23659787.851B/s
+INFO:root:CLIENTE 7: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 7: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.785segundos - Tasa_transferencia_promedio:21914289.68B/s
+INFO:root:CLIENTE 10: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 10: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:3.607segundos - Tasa_transferencia_promedio:29069957.661B/s
+INFO:root:CLIENTE 14: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 14: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:3.637segundos - Tasa_transferencia_promedio:28828091.551B/s
+INFO:root:CLIENTE 19: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 19: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.313segundos - Tasa_transferencia_promedio:24311620.329B/s
+INFO:root:CLIENTE 22: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 22: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:5.11segundos - Tasa_transferencia_promedio:20519231.426B/s
+INFO:root:CLIENTE 18: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 18: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:2.315segundos - Tasa_transferencia_promedio:45303546.115B/s
+INFO:root:CLIENTE 13: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 13: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.864segundos - Tasa_transferencia_promedio:21556458.41B/s
+INFO:root:CLIENTE 2: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 2: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.226segundos - Tasa_transferencia_promedio:24810156.143B/s
+INFO:root:CLIENTE 12: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 12: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.627segundos - Tasa_transferencia_promedio:22660075.724B/s
+INFO:root:CLIENTE 16: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 16: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:5.192segundos - Tasa_transferencia_promedio:20196459.747B/s
+INFO:root:CLIENTE 9: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 9: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.129segundos - Tasa_transferencia_promedio:25398252.639B/s
+INFO:root:CLIENTE 20: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 20: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.621segundos - Tasa_transferencia_promedio:22693400.037B/s
+INFO:root:CLIENTE 0: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 0: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.49segundos - Tasa_transferencia_promedio:23353694.823B/s
+INFO:root:CLIENTE 15: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 15: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:4.044segundos - Tasa_transferencia_promedio:25931449.9B/s
+INFO:root:MAIN: Los archivos transferidos exitosamente fueron almacenados en "archivos_recibidos/clienteX_Y", donde X es el numero del cliente y Y el nombre original del archivo transferido
+INFO:root:MAIN: Ejecucion terminada

@@ -8,8 +8,9 @@ import tqdm
 import os
 import logging
 import datetime
+import time
 
-BUFFER_SIZE = 4096
+BUFFER_SIZE = 10485760
 SEPARATOR = "<SEPARATOR>"
 
 # -------------------------------------------------------------------------------------------------
@@ -54,11 +55,21 @@ class ClientThread(Thread):
 
         try:
 
+            # --> Hash
+
+            Hfile = hash_file(filename)
+
+            self.conn.send(f"{Hfile}".encode())
+            logging.info("Se envio correctamente el hash del archivo !")
+
+            time.sleep(1.5)
+
+            # --> File
+
             self.conn.send(f"{filename}{SEPARATOR}{filesize}".encode())
             logging.info(f"Enviando el archivo {filename} de tamano {filesize}".encode())
 
             progress = tqdm.tqdm(range(filesize), f"Sending {filename}", unit="B", unit_scale=True, unit_divisor=1024)
-            print(progress.split("["))
 
             with open(filename, "rb") as f:
 
@@ -71,18 +82,10 @@ class ClientThread(Thread):
 
                     if not bytes_read:
                         break
-
+            progress.close()
             logging.info("Se envio correctamente el archivo principal !")            
 
         finally:
-
-            # --> Hash
-
-            Hfile = hash_file(filename)
-
-            self.conn.send(f"{Hfile}".encode())
-            logging.info("Se envio correctamente el hash del archivo !")
-
             self.conn.close()
 
 # --------------------------------------------------------------------------

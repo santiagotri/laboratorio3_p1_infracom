@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="747c0b2a-2307-4ce5-bef1-d526755f1f53" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Cliente/registro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente/cliente.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/cliente.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Servidor/Servidor_V2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/Servidor_V2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +15,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Cliente/cliente.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,22 +69,11 @@
       <workItem from="1647444597129" duration="2922000" />
       <workItem from="1647529816204" duration="673000" />
       <workItem from="1647530997563" duration="6797000" />
-      <workItem from="1647701304269" duration="2478000" />
+      <workItem from="1647701304269" duration="13003000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

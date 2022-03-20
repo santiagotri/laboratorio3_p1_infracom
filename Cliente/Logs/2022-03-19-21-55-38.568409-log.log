@@ -1,0 +1,85 @@
+INFO:root:MAIN: creando 10 clientes
+INFO:root:CLIENTE 0: creado. Entrando en espera
+INFO:root:CLIENTE 1: creado. Entrando en espera
+INFO:root:CLIENTE 2: creado. Entrando en espera
+INFO:root:CLIENTE 3: creado. Entrando en espera
+INFO:root:CLIENTE 4: creado. Entrando en espera
+INFO:root:CLIENTE 5: creado. Entrando en espera
+INFO:root:CLIENTE 6: creado. Entrando en espera
+INFO:root:CLIENTE 7: creado. Entrando en espera
+INFO:root:CLIENTE 8: creado. Entrando en espera
+INFO:root:CLIENTE 9: creado. Entrando en espera
+INFO:root:MAIN: Se han creado correctamente todos los clientes, iniciando las conexiones en 5 segundos. Cada conexion será lanzada con 1 segundo(s) de diferencia
+INFO:root:CLIENTE 0: Iniciando proceso de conexion
+INFO:root:CLIENTE 0: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 0: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 0: Esperando al envio de un archivo
+INFO:root:CLIENTE 1: Iniciando proceso de conexion
+INFO:root:CLIENTE 1: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 1: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 1: Esperando al envio de un archivo
+INFO:root:CLIENTE 2: Iniciando proceso de conexion
+INFO:root:CLIENTE 2: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 2: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 2: Esperando al envio de un archivo
+INFO:root:CLIENTE 3: Iniciando proceso de conexion
+INFO:root:CLIENTE 3: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 3: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 3: Esperando al envio de un archivo
+INFO:root:CLIENTE 4: Iniciando proceso de conexion
+INFO:root:CLIENTE 4: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 4: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 4: Esperando al envio de un archivo
+INFO:root:CLIENTE 5: Iniciando proceso de conexion
+INFO:root:CLIENTE 5: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 5: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 5: Esperando al envio de un archivo
+INFO:root:CLIENTE 6: Iniciando proceso de conexion
+INFO:root:CLIENTE 6: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 6: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 6: Esperando al envio de un archivo
+INFO:root:CLIENTE 7: Iniciando proceso de conexion
+INFO:root:CLIENTE 7: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 7: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 7: Esperando al envio de un archivo
+INFO:root:CLIENTE 8: Iniciando proceso de conexion
+INFO:root:CLIENTE 8: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 8: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 8: Esperando al envio de un archivo
+INFO:root:CLIENTE 9: Iniciando proceso de conexion
+INFO:root:CLIENTE 9: Intentando conectarse a localhost usando el puerto 10000
+INFO:root:CLIENTE 9: Conexion exitosa! Esperando al envio
+INFO:root:CLIENTE 9: Esperando al envio de un archivo
+INFO:root:CLIENTE 5: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 0: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 2: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 9: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 4: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 6: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 3: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 1: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 8: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 7: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:MAIN: Se han recibido todos los archivos. Se verificará Integridad para cada cliente.
+INFO:root:CLIENTE 9: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 9: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:11.299segundos - Tasa_transferencia_promedio:9280310.679B/s
+INFO:root:CLIENTE 7: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 7: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:11.196segundos - Tasa_transferencia_promedio:9365453.2B/s
+INFO:root:CLIENTE 8: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 8: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:11.09segundos - Tasa_transferencia_promedio:9455526.55B/s
+INFO:root:CLIENTE 2: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 2: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:11.062segundos - Tasa_transferencia_promedio:9479053.111B/s
+INFO:root:CLIENTE 5: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 5: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:11.929segundos - Tasa_transferencia_promedio:8790251.548B/s
+INFO:root:CLIENTE 1: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 1: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:11.614segundos - Tasa_transferencia_promedio:9028523.883B/s
+INFO:root:CLIENTE 0: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 0: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:11.415segundos - Tasa_transferencia_promedio:9185888.676B/s
+INFO:root:CLIENTE 3: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 3: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:11.35segundos - Tasa_transferencia_promedio:9238378.547B/s
+INFO:root:CLIENTE 4: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 4: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:11.122segundos - Tasa_transferencia_promedio:9427802.96B/s
+INFO:root:CLIENTE 6: Integridad verificada correctamente (Hash OK)
+INFO:root:CLIENTE 6: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:11.08segundos - Tasa_transferencia_promedio:9463726.769B/s
+INFO:root:MAIN: Los archivos transferidos exitosamente fueron almacenados en "archivos_recibidos/clienteX_Y", donde X es el numero del cliente y Y el nombre original del archivo transferido
+INFO:root:MAIN: Ejecucion terminada

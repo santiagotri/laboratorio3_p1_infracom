@@ -38,9 +38,16 @@ for i in clientes:
 while barrera.n_waiting != numClientes:
     pass
 
-imprimir("Se han creado correctamente todos los clientes, iniciando las conexiones en 5 segundos. Cada conexion será lanzada con 1 segundo de diferencia")
+imprimir("Se han creado correctamente todos los clientes, iniciando las conexiones en 5 segundos. Cada conexion será lanzada con "+str(segundosEntreThreat)+" segundo(s) de diferencia")
 time.sleep(5)
 
+barrera.wait()
+barrera.reset()
+
+while barrera.n_waiting != numClientes:
+    pass
+
+imprimir("Se han recibido todos los archivos. Se verificará Integridad para cada cliente.")
 barrera.wait()
 barrera.reset()
 
