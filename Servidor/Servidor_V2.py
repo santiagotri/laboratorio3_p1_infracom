@@ -71,6 +71,7 @@ class ClientThread(Thread):
 
             progress = tqdm.tqdm(range(filesize), f"Sending {filename}", unit="B", unit_scale=True, unit_divisor=1024)
 
+            self.tiempo_total = time.time()
             with open(filename, "rb") as f:
 
                 while True:
@@ -82,10 +83,14 @@ class ClientThread(Thread):
 
                     if not bytes_read:
                         break
+
             progress.close()
+            self.tiempo_total= time.time() - self.tiempo_total
             logging.info("Se envio correctamente el archivo principal !")            
 
         finally:
+
+            logging.INFO("Total_de_bytes_recibidos:" + str(filesize) + " - Tiempo_tranferencia:" + str(round(self.tiempo_total,3))+"segundos - Tasa_transferencia_promedio:" + str(round(filesize/self.tiempo_total,3))+"B/s")
             self.conn.close()
 
 # --------------------------------------------------------------------------
