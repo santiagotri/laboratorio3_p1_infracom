@@ -86,11 +86,12 @@ class ClientThread(Thread):
 
             progress.close()
             self.tiempo_total= time.time() - self.tiempo_total
-            logging.info("Se envio correctamente el archivo principal !")            
+            logging.info("Se envio correctamente el archivo principal !")
+
+            logging.info("Total_de_bytes_recibidos:" + str(filesize) + " - Tiempo_tranferencia:" + str(round(self.tiempo_total,3))+"segundos - Tasa_transferencia_promedio:" + str(round(filesize/self.tiempo_total,3))+"B/s")            
 
         finally:
 
-            logging.INFO("Total_de_bytes_recibidos:" + str(filesize) + " - Tiempo_tranferencia:" + str(round(self.tiempo_total,3))+"segundos - Tasa_transferencia_promedio:" + str(round(filesize/self.tiempo_total,3))+"B/s")
             self.conn.close()
 
 # --------------------------------------------------------------------------
