@@ -40,59 +40,63 @@ logging.basicConfig(filename=nombreArchivoLogging, level=logging.DEBUG)
 # Multithreaded Python server : TCP Server Socket Thread Pool
 class ClientThread(Thread): 
  
-    def __init__(self,ip,port, c): 
+    def __init__(self, s, address): 
         Thread.__init__(self)
-        self.ip = ip
-        self.port = port
-        self.conn = c
-        print(f"[+] Nuevo cliente en: {ip}:{str(port)}")
-        logging.info(f"[+] Nuevo cliente en: {ip}:{str(port)}")
+        self.ip = address[0]
+        self.port = address[1]
+        self.address = address
+        self.s = s
+        print(f"[+] Nuevo cliente en: {self.ip}:{str(self.port)}")
+        logging.info(f"[+] Nuevo cliente en: {self.ip}:{str(self.port)}")
 
  
     def run(self): 
 
         # --> ARCHIVO PRINCIPAL
 
-        try:
+       try:
 
-            # --> Hash
+          # --> Hash
 
-            Hfile = hash_file(filename)
+          Hfile = hash_file(filename)
 
-            self.conn.send(f"{Hfile}".encode())
-            logging.info("Se envio correctamente el hash del archivo !")
+          self.s.sendto(f"{Hfile}".encode(), self.address)
+          logging.info("Se envio correctamente el hash del archivo !")
 
-            time.sleep(1.5)
+          time.sleep(1.5)
 
-            # --> File
+          # --> File
 
-            self.conn.send(f"{filename}{SEPARATOR}{filesize}".encode())
-            logging.info(f"Enviando el archivo {filename} de tamano {filesize}".encode())
+          self.s.sendto(f"{filename}{SEPARATOR}{filesize}".encode(), self.address)
+          logging.info(f"Enviando el archivo {filename} de tamano {filesize}".encode())
 
-            progress = tqdm.tqdm(range(filesize), f"Sending {filename}", unit="B", unit_scale=True, unit_divisor=1024)
+          progress = tqdm.tqdm(range(filesize), f"Sending {filename}", unit="B", unit_scale=True, unit_divisor=1024)
 
-            self.tiempo_total = time.time()
-            with open(filename, "rb") as f:
+          self.tiempo_total = time.time()
+          with open(filename, "rb") as f:
 
-                while True:
+              while True:
 
-                    bytes_read = f.read(BUFFER_SIZE)
+                  bytes_read = f.read(BUFFER_SIZE)
 
-                    self.conn.send(bytes_read)
-                    progress.update(len(bytes_read))
+                  self.s.sendto(bytes_read, self.address)
+                  progress.update(len(bytes_read))
 
-                    if not bytes_read:
-                        break
+                  if not bytes_read:
+                      break
 
-            progress.close()
-            self.tiempo_total= time.time() - self.tiempo_total
-            logging.info("Se envio correctamente el archivo principal !")
+          progress.close()
+          self.tiempo_total= time.time() - self.tiempo_total
+          logging.info("Se envio correctamente el archivo principal !")
 
-            logging.info("Total_de_bytes_recibidos:" + str(filesize) + " - Tiempo_tranferencia:" + str(round(self.tiempo_total,3))+"segundos - Tasa_transferencia_promedio:" + str(round(filesize/self.tiempo_total,3))+"B/s")            
+          logging.info(
+              f"Total_de_bytes_recibidos:{str(filesize)} - Tiempo_tranferencia:" +
+              str(round(self.tiempo_total, 3)) +
+              "segundos - Tasa_transferencia_promedio:" +
+              str(round(filesize / self.tiempo_total, 3)) + "B/s")            
 
-        finally:
-
-            self.conn.close()
+       finally:
+          pass
 
 # --------------------------------------------------------------------------
 
@@ -105,7 +109,7 @@ HOST, PORT, NUMBER = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
 filename = f"{sys.argv[4]}MB.bin"
 filesize = os.path.getsize(filename)
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)       # --> """ UDP """
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) 
 s.bind((HOST, PORT))
 threads = [] 
@@ -114,12 +118,13 @@ try:
 
     while True: 
 
-        s.listen(NUMBER) 
+        #s.listen(NUMBER) 
         logging.info(f"Server listening in {HOST} {PORT}")
         print(f"Server listening in {HOST} {PORT}")
 
-        (conn, (ip,port)) = s.accept() 
-        newthread = ClientThread(ip,port, conn)  
+        
+        address = s.recvfrom(1024)[1]
+        newthread = ClientThread(s, address)  
         threads.append(newthread) 
 
         if len(threads) == NUMBER:

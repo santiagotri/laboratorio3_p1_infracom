@@ -41,7 +41,7 @@ class Cliente(threading.Thread):
         self.id = id
         self.imprimir("creado. Entrando en espera")
         self.barrera = barrera
-        self.puerto = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Crear el puerto TCP/IP socket
+        self.puerto = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # Crear el puerto UDP/IP socket
         self.PORT = puertoinicial
         self.HOST = pdireccion
         self.segundosEntreThreat=(segundosEntreThreat*id)
