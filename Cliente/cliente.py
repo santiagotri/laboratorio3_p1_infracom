@@ -11,14 +11,14 @@ import hashlib
 class Cliente(threading.Thread):
 
     # Parametros
-    BUFFER_SIZE = 10485760
+    BUFFER_SIZE = 1024
     SEPARATOR = "<SEPARATOR>"
 
     msgFromClient = "Hello UDP Server"
     bytesToSend = str.encode(msgFromClient)
 
     HOST = "localhost"
-    PORT = 10000
+    PORT = 20001
 
     # Variables globales
     imprimirMensajes = False

@@ -10,7 +10,7 @@ import logging
 import datetime
 import time
 
-BUFFER_SIZE = 10485760
+BUFFER_SIZE = 1024
 SEPARATOR = "<SEPARATOR>"
 
 # -------------------------------------------------------------------------------------------------
