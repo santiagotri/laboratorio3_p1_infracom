@@ -14,6 +14,9 @@ class Cliente(threading.Thread):
     BUFFER_SIZE = 10485760
     SEPARATOR = "<SEPARATOR>"
 
+    msgFromClient = "Hello UDP Server"
+    bytesToSend = str.encode(msgFromClient)
+
     HOST = "localhost"
     PORT = 10000
 
@@ -41,7 +44,7 @@ class Cliente(threading.Thread):
         self.id = id
         self.imprimir("creado. Entrando en espera")
         self.barrera = barrera
-        self.puerto = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # Crear el puerto UDP/IP socket
+        self.puerto = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         self.PORT = puertoinicial
         self.HOST = pdireccion
         self.segundosEntreThreat=(segundosEntreThreat*id)
@@ -56,21 +59,25 @@ class Cliente(threading.Thread):
 
     #Realiza la conexion al servidor con los parametros establecidos en el contreuctor
     def realizar_conexion(self):
-        self.imprimir("Intentando conectarse a " + str(self.HOST) + " usando el puerto " + str(self.PORT))
+        self.imprimir("Intentando enviar mensaje a " + str(self.HOST) + " usando el puerto " + str(self.PORT))
         try:
-            self.puerto.connect((self.HOST,self.PORT))
-            self.imprimir("Conexion exitosa! Esperando al envio")
+            self.puerto.sendto(self.bytesToSend, (self.HOST, self.PORT))
+            self.imprimir("Mensaje enviado exitosamente! Esperando al envio por parte del servidor")
             self.recibir_archivo()
         except Exception as e:
-            self.imprimir_error("Ha fallado el intento de conexion (" + str(e) + ")")
+            self.imprimir_error("Ha fallado el intento de envío (" + str(e) + ")")
             traceback.print_exc()
 
     #Escuchar al servidor para recibir el archivo enviado.
     def recibir_archivo(self):
         try:
             self.imprimir("Esperando al envio de un archivo")
-            hash_recibido = self.puerto.recv(self.BUFFER_SIZE).decode()
-            received = self.puerto.recv(self.BUFFER_SIZE).decode()
+            hash_recibido = self.puerto.recvfrom(self.BUFFER_SIZE)
+            received = self.puerto.recvfrom(self.BUFFER_SIZE)
+            #print(hash_recibido[0].decode())
+            #print(received[0].decode())
+            hash_recibido = hash_recibido[0].decode()
+            received = received[0].decode()
             filename, filesize = received.split(self.SEPARATOR)
             filename = os.path.basename(filename)
             filesize = int(filesize)
@@ -81,8 +88,8 @@ class Cliente(threading.Thread):
             with open(ruta_a_guardar, "wb") as f:
                 while True:
                     # read 1024 bytes from the socket (receive)
-                    bytes_read = self.puerto.recv(self.BUFFER_SIZE)
-
+                    bytes_read = self.puerto.recvfrom(self.BUFFER_SIZE)
+                    bytes_read = bytes_read[0]
                     # write to the file the bytes we just received
                     f.write(bytes_read)
                     # update the progress bar
