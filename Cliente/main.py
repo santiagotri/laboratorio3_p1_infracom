@@ -11,10 +11,26 @@ IMPRIMIR_MENSAJES_MAIN = True
 fecha = str(datetime.datetime.now()).split(" ")
 hora = fecha[1].split(":")
 nombreArchivoLogging = "Logs/"+fecha[0]+"-"+hora[0]+"-"+hora[1]+"-"+hora[2]+"-log.log"
-numClientes = int(input("¿Cuantos clientes desea crear?"))
-direccionServidor = input("Introduzca la direccion del servidor (EJ:localhost)")
-puertoInicial = int(input("¿Cual es el puerto en el que está escuchando el servidor?"))
-segundosEntreThreat = int(input("¿Cada cuantos segundos desea enviar cada uno de los clientes? (ej:3)"))
+numClientes = input("¿Cuantos clientes desea crear? {default: 3}")
+if numClientes == "":
+    numClientes = 3
+else:
+    numClientes = int(numClientes)
+
+direccionServidor = input("Introduzca la direccion del servidor {default:localhost}")
+if numClientes == "": direccionServidor = "localhost"
+puertoInicial = input("¿Cual es el puerto en el que está escuchando el servidor? {default: 12345}")
+if puertoInicial == "":
+    puertoInicial = 12345
+else:
+    puertoInicial = int(puertoInicial)
+
+segundosEntreThreat = input("¿Cada cuantos segundos desea enviar cada uno de los clientes? {default:1}")
+if segundosEntreThreat == "":
+    segundosEntreThreat = 1
+else:
+    segundosEntreThreat = int(segundosEntreThreat)
+
 logging.basicConfig(filename=nombreArchivoLogging, level=logging.DEBUG)
 
 clientes = []

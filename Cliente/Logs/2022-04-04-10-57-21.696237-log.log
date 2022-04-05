@@ -1,0 +1,35 @@
+INFO:root:MAIN: creando 3 clientes
+INFO:root:CLIENTE 0: creado. Entrando en espera
+INFO:root:CLIENTE 1: creado. Entrando en espera
+INFO:root:CLIENTE 2: creado. Entrando en espera
+INFO:root:MAIN: Se han creado correctamente todos los clientes, iniciando las conexiones en 5 segundos. Cada conexion será lanzada con 1 segundo(s) de diferencia
+INFO:root:CLIENTE 0: Iniciando proceso de conexion
+INFO:root:CLIENTE 0: Intentando enviar mensaje a localhost usando el puerto 12345
+INFO:root:CLIENTE 0: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 0: Esperando al envio de un archivo
+INFO:root:CLIENTE 1: Iniciando proceso de conexion
+INFO:root:CLIENTE 1: Intentando enviar mensaje a localhost usando el puerto 12345
+INFO:root:CLIENTE 1: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 1: Esperando al envio de un archivo
+INFO:root:CLIENTE 2: Iniciando proceso de conexion
+INFO:root:CLIENTE 2: Intentando enviar mensaje a localhost usando el puerto 12345
+INFO:root:CLIENTE 2: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 2: Esperando al envio de un archivo
+INFO:root:CLIENTE 2: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 0: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 1: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:MAIN: Se han recibido todos los archivos. Se verificará Integridad para cada cliente.
+ERROR:root:CLIENTE 0: ¡Error de integridad!
+ERROR:root:CLIENTE 0: 2c8b1c5e455277b84036f5cab09f6d4d1be4ae12
+ERROR:root:CLIENTE 0: 2c2ceccb5ec5574f791d45b63c940cff20550f9a
+INFO:root:CLIENTE 0: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:3.25segundos - Tasa_transferencia_promedio:32263131.378B/s
+ERROR:root:CLIENTE 1: ¡Error de integridad!
+ERROR:root:CLIENTE 1: 342627ddb908cb41fe3a87d79e96a7a15b812c7f
+ERROR:root:CLIENTE 1: 2c2ceccb5ec5574f791d45b63c940cff20550f9a
+INFO:root:CLIENTE 1: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:3.493segundos - Tasa_transferencia_promedio:30017248.55B/s
+ERROR:root:CLIENTE 2: ¡Error de integridad!
+ERROR:root:CLIENTE 2: ffcd0e2d3d1ed9e6ef030534f28f506b9975c939
+ERROR:root:CLIENTE 2: 2c2ceccb5ec5574f791d45b63c940cff20550f9a
+INFO:root:CLIENTE 2: Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:3.431segundos - Tasa_transferencia_promedio:30559986.097B/s
+INFO:root:MAIN: Los archivos transferidos exitosamente fueron almacenados en "archivos_recibidos/clienteX_Y", donde X es el numero del cliente y Y el nombre original del archivo transferido
+INFO:root:MAIN: Ejecucion terminada

@@ -78,8 +78,9 @@ class ClientThread(Thread):
               while True:
 
                   bytes_read = f.read(BUFFER_SIZE)
-
                   self.s.sendto(bytes_read, self.address)
+                  #print('enviando: '+ str(len(str(bytes_read))))
+                  time.sleep(0.001)
                   progress.update(len(bytes_read))
 
                   if not bytes_read:
