@@ -1,4 +1,0 @@
-INFO:root:Server listening in localhost 12345
-INFO:root:[+] Nuevo cliente en: 127.0.0.1:57423
-INFO:root:Se envio correctamente el hash del archivo !
-INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
