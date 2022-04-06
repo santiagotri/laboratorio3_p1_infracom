@@ -61,7 +61,7 @@ class ClientThread(Thread):
           Hfile = hash_file(filename)
 
           self.s.sendto(f"{Hfile}".encode(), self.address)
-          logging.info("Se envio correctamente el hash del archivo !")
+          #logging.info("Se envio correctamente el hash del archivo !")
 
           time.sleep(1.5)
 

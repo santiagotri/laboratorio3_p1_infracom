@@ -1,6 +1,0 @@
-INFO:root:Server listening in localhost 12345
-INFO:root:[+] Nuevo cliente en: 127.0.0.1:64199
-INFO:root:Se envio correctamente el hash del archivo !
-INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
-INFO:root:Se envio correctamente el archivo principal !
-INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:0.344segundos - Tasa_transferencia_promedio:305113935.131B/s
