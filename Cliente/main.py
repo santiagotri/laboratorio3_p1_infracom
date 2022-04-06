@@ -31,6 +31,12 @@ if segundosEntreThreat == "":
 else:
     segundosEntreThreat = int(segundosEntreThreat)
 
+Buffer_size = input("¿De que tamaño desea que sean los paquetes? {default:1024}")
+if Buffer_size == "":
+    Buffer_size = 1024
+else:
+    Buffer_size = int(Buffer_size)
+
 logging.basicConfig(filename=nombreArchivoLogging, level=logging.DEBUG)
 
 clientes = []
@@ -44,7 +50,7 @@ def imprimir (mensaje):
 
 imprimir("creando "+ str(numClientes) + " clientes")
 for i in range(numClientes):
-    clienteNuevo = Cliente(i, IMPRIMIR_MENSAJES_CLIENTE,nombreArchivoLogging,barrera,direccionServidor,puertoInicial,segundosEntreThreat)
+    clienteNuevo = Cliente(i, IMPRIMIR_MENSAJES_CLIENTE,nombreArchivoLogging,barrera,direccionServidor,puertoInicial,segundosEntreThreat, pBUFFER_SIZE=Buffer_size)
     clientes.append(clienteNuevo)
 
 

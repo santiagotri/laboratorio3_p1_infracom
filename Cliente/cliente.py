@@ -37,7 +37,7 @@ class Cliente(threading.Thread):
         self.logging.error(msjeAImprimir)
 
     #Constructor 🔧👷🏻‍♂️
-    def __init__(self, id, pImprimir_mensajes,nombreArchivoLogging,barrera,pdireccion,puertoinicial,segundosEntreThreat):
+    def __init__(self, id, pImprimir_mensajes,nombreArchivoLogging,barrera,pdireccion,puertoinicial,segundosEntreThreat, pBUFFER_SIZE):
         super(Cliente, self).__init__()
         self.logging.basicConfig(filename=nombreArchivoLogging, encoding='utf-8', level=logging.DEBUG)
         self.imprimirMensajes = pImprimir_mensajes
@@ -48,6 +48,9 @@ class Cliente(threading.Thread):
         self.PORT = puertoinicial
         self.HOST = pdireccion
         self.segundosEntreThreat=(segundosEntreThreat*id)
+        self.BUFFER_SIZE = pBUFFER_SIZE
+        self.msgFromClient = str(pBUFFER_SIZE)
+        self.bytesToSend = str.encode(self.msgFromClient)
 
     #Metodo run del super(), ejecutada cuando el thread empieza con el start()
     def run(self):
@@ -103,6 +106,7 @@ class Cliente(threading.Thread):
             progress.close()
             self.tiempo_total= time.time() - self.tiempo_total
             self.barrera.wait()
+            """
             hash_calculado = self.hash_file(ruta_a_guardar)
             if(hash_calculado==hash_recibido):
                 self.imprimir("Integridad verificada correctamente (Hash OK)")
@@ -110,6 +114,7 @@ class Cliente(threading.Thread):
                 self.imprimir_error("¡Error de integridad!")
                 self.imprimir_error(str(hash_calculado))
                 self.imprimir_error(str(hash_recibido))
+            """
             self.imprimir("Total_de_bytes_recibidos:" + str(filesize) + " - Tiempo_tranferencia:" + str(round(self.tiempo_total,3))+"segundos - Tasa_transferencia_promedio:" + str(round(filesize/self.tiempo_total,3))+"B/s")
         finally:
             self.puerto.close()
