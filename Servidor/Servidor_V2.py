@@ -124,7 +124,8 @@ try:
         print(f"Server listening in {HOST} {PORT}")
 
         
-        address = s.recvfrom(1024)[1]
+        BUFFER_SIZE, address = s.recvfrom(1024)
+        BUFFER_SIZE = int(BUFFER_SIZE)
         newthread = ClientThread(s, address)  
         threads.append(newthread) 
 
