@@ -80,7 +80,7 @@ class ClientThread(Thread):
                   bytes_read = f.read(BUFFER_SIZE)
                   self.s.sendto(bytes_read, self.address)
                   #print('enviando: '+ str(len(str(bytes_read))))
-                  time.sleep(0.001)
+                  time.sleep(0.8)
                   progress.update(len(bytes_read))
 
                   if not bytes_read:
@@ -124,7 +124,8 @@ try:
         print(f"Server listening in {HOST} {PORT}")
 
         
-        address = s.recvfrom(1024)[1]
+        BUFFER_SIZE, address = s.recvfrom(1024)
+        BUFFER_SIZE = int(BUFFER_SIZE)
         newthread = ClientThread(s, address)  
         threads.append(newthread) 
 
