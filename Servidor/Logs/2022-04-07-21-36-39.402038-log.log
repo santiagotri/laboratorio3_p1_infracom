@@ -1,0 +1,50 @@
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:63587
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:51637
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:51531
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:63918
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:60178
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:56522
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:56236
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:55852
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:61620
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:64525
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:33.003segundos - Tasa_transferencia_promedio:3177211.964B/s
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:33.009segundos - Tasa_transferencia_promedio:3176645.365B/s
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:33.008segundos - Tasa_transferencia_promedio:3176689.189B/s
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:33.016segundos - Tasa_transferencia_promedio:3175995.78B/s
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:33.0segundos - Tasa_transferencia_promedio:3177502.066B/s
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:33.035segundos - Tasa_transferencia_promedio:3174177.932B/s
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:33.001segundos - Tasa_transferencia_promedio:3177407.12B/s
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:33.005segundos - Tasa_transferencia_promedio:3176978.828B/s
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:33.028segundos - Tasa_transferencia_promedio:3174792.626B/s
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:33.035segundos - Tasa_transferencia_promedio:3174153.993B/s

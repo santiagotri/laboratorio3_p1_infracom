@@ -1,0 +1,85 @@
+INFO:root:MAIN: creando 10 clientes
+INFO:root:CLIENTE 0: creado. Entrando en espera
+INFO:root:CLIENTE 1: creado. Entrando en espera
+INFO:root:CLIENTE 2: creado. Entrando en espera
+INFO:root:CLIENTE 3: creado. Entrando en espera
+INFO:root:CLIENTE 4: creado. Entrando en espera
+INFO:root:CLIENTE 5: creado. Entrando en espera
+INFO:root:CLIENTE 6: creado. Entrando en espera
+INFO:root:CLIENTE 7: creado. Entrando en espera
+INFO:root:CLIENTE 8: creado. Entrando en espera
+INFO:root:CLIENTE 9: creado. Entrando en espera
+INFO:root:MAIN: Se han creado correctamente todos los clientes, iniciando las conexiones en 5 segundos. Cada conexion será lanzada con 1 segundo(s) de diferencia
+INFO:root:CLIENTE 0: Iniciando proceso de conexion
+INFO:root:CLIENTE 0: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 0: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 0: Esperando al envio de un archivo
+INFO:root:CLIENTE 1: Iniciando proceso de conexion
+INFO:root:CLIENTE 1: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 1: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 1: Esperando al envio de un archivo
+INFO:root:CLIENTE 2: Iniciando proceso de conexion
+INFO:root:CLIENTE 2: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 2: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 2: Esperando al envio de un archivo
+INFO:root:CLIENTE 3: Iniciando proceso de conexion
+INFO:root:CLIENTE 3: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 3: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 3: Esperando al envio de un archivo
+INFO:root:CLIENTE 4: Iniciando proceso de conexion
+INFO:root:CLIENTE 4: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 4: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 4: Esperando al envio de un archivo
+INFO:root:CLIENTE 5: Iniciando proceso de conexion
+INFO:root:CLIENTE 5: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 5: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 5: Esperando al envio de un archivo
+INFO:root:CLIENTE 6: Iniciando proceso de conexion
+INFO:root:CLIENTE 6: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 6: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 6: Esperando al envio de un archivo
+INFO:root:CLIENTE 7: Iniciando proceso de conexion
+INFO:root:CLIENTE 7: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 7: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 7: Esperando al envio de un archivo
+INFO:root:CLIENTE 8: Iniciando proceso de conexion
+INFO:root:CLIENTE 8: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 8: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 8: Esperando al envio de un archivo
+INFO:root:CLIENTE 9: Iniciando proceso de conexion
+INFO:root:CLIENTE 9: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 9: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 9: Esperando al envio de un archivo
+INFO:root:CLIENTE 6: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 4: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 3: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 9: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 1: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 5: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 2: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 8: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 7: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 0: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 2: Escribiendo archivo en disco...
+INFO:root:CLIENTE 4: Escribiendo archivo en disco...
+INFO:root:CLIENTE 3: Escribiendo archivo en disco...
+INFO:root:CLIENTE 1: Escribiendo archivo en disco...
+INFO:root:CLIENTE 0: Escribiendo archivo en disco...
+INFO:root:CLIENTE 9: Escribiendo archivo en disco...
+INFO:root:CLIENTE 8: Escribiendo archivo en disco...
+INFO:root:CLIENTE 6: Escribiendo archivo en disco...
+INFO:root:CLIENTE 7: Escribiendo archivo en disco...
+INFO:root:CLIENTE 5: Escribiendo archivo en disco...
+INFO:root:MAIN: Se han recibido todos los archivos.
+INFO:root:CLIENTE 2: Total_de_bytes_recibidos:59351040 - Tiempo_tranferencia:71.966segundos - Tasa_transferencia_promedio:1457043.665B/s
+INFO:root:CLIENTE 4: Total_de_bytes_recibidos:59793408 - Tiempo_tranferencia:77.177segundos - Tasa_transferencia_promedio:1358667.514B/s
+INFO:root:CLIENTE 8: Total_de_bytes_recibidos:59043840 - Tiempo_tranferencia:77.485segundos - Tasa_transferencia_promedio:1353260.678B/s
+INFO:root:CLIENTE 5: Total_de_bytes_recibidos:59289600 - Tiempo_tranferencia:75.554segundos - Tasa_transferencia_promedio:1387855.682B/s
+INFO:root:CLIENTE 6: Total_de_bytes_recibidos:58871808 - Tiempo_tranferencia:76.957segundos - Tasa_transferencia_promedio:1362549.17B/s
+INFO:root:CLIENTE 9: Total_de_bytes_recibidos:61313024 - Tiempo_tranferencia:79.803segundos - Tasa_transferencia_promedio:1313952.028B/s
+INFO:root:CLIENTE 0: Total_de_bytes_recibidos:60489728 - Tiempo_tranferencia:75.948segundos - Tasa_transferencia_promedio:1380644.415B/s
+INFO:root:CLIENTE 3: Total_de_bytes_recibidos:61382656 - Tiempo_tranferencia:72.424segundos - Tasa_transferencia_promedio:1447837.37B/s
+INFO:root:CLIENTE 7: Total_de_bytes_recibidos:61014016 - Tiempo_tranferencia:77.855segundos - Tasa_transferencia_promedio:1346837.722B/s
+INFO:root:CLIENTE 1: Total_de_bytes_recibidos:60661760 - Tiempo_tranferencia:78.442segundos - Tasa_transferencia_promedio:1336750.557B/s
+INFO:root:MAIN: Los archivos transferidos exitosamente fueron almacenados en "archivos_recibidos/clienteX_Y", donde X es el numero del cliente y Y el nombre original del archivo transferido
+INFO:root:MAIN: Ejecucion terminada

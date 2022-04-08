@@ -89,14 +89,14 @@ class Cliente(threading.Thread):
             progress = tqdm.tqdm(range(filesize), f"Cliente{str(self.id)}: Recibiendo {filename}", unit="B", unit_scale=True, unit_divisor=1024)
             self.tiempo_total = time.time()
             self.cantidad_recibida = 0
+            mensaje_leido =[]
             with open(ruta_a_guardar, "wb") as f:
                 while True:
                     # read 1024 bytes from the socket (receive)
-                    bytes_read = self.puerto.recvfrom(self.BUFFER_SIZE)
-                    bytes_read = bytes_read[0]
+                    bytes_read = self.puerto.recvfrom(self.BUFFER_SIZE)[0]
                     #print('recibiendo:' + str(len(str(bytes_read))))
                     # write to the file the bytes we just received
-                    f.write(bytes_read)
+                    mensaje_leido.append(bytes_read)
                     # update the progress bar
                     progress.update(len(bytes_read))
                     self.cantidad_recibida += len(bytes_read)
@@ -106,7 +106,11 @@ class Cliente(threading.Thread):
                         # file transmitting is done
                         print("hola")
                         break
-            progress.close()
+                progress.close()
+                self.imprimir("Escribiendo archivo en disco...")
+                for i in mensaje_leido:
+                    f.write(i)
+
             self.tiempo_total= time.time() - self.tiempo_total
             self.barrera.wait()
             """

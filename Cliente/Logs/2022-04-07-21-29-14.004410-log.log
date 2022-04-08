@@ -1,0 +1,26 @@
+INFO:root:MAIN: creando 3 clientes
+INFO:root:CLIENTE 0: creado. Entrando en espera
+INFO:root:CLIENTE 1: creado. Entrando en espera
+INFO:root:CLIENTE 2: creado. Entrando en espera
+INFO:root:MAIN: Se han creado correctamente todos los clientes, iniciando las conexiones en 5 segundos. Cada conexion será lanzada con 1 segundo(s) de diferencia
+INFO:root:CLIENTE 0: Iniciando proceso de conexion
+INFO:root:CLIENTE 0: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 0: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 0: Esperando al envio de un archivo
+INFO:root:CLIENTE 1: Iniciando proceso de conexion
+INFO:root:CLIENTE 1: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 1: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 1: Esperando al envio de un archivo
+INFO:root:CLIENTE 2: Iniciando proceso de conexion
+INFO:root:CLIENTE 2: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 2: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 2: Esperando al envio de un archivo
+INFO:root:CLIENTE 1: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 0: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 2: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:MAIN: Se han recibido todos los archivos.
+INFO:root:CLIENTE 1: Total_de_bytes_recibidos:101192704 - Tiempo_tranferencia:174.445segundos - Tasa_transferencia_promedio:601091.599B/s
+INFO:root:CLIENTE 0: Total_de_bytes_recibidos:100939776 - Tiempo_tranferencia:183.727segundos - Tasa_transferencia_promedio:570724.981B/s
+INFO:root:CLIENTE 2: Total_de_bytes_recibidos:100783104 - Tiempo_tranferencia:178.422segundos - Tasa_transferencia_promedio:587695.489B/s
+INFO:root:MAIN: Los archivos transferidos exitosamente fueron almacenados en "archivos_recibidos/clienteX_Y", donde X es el numero del cliente y Y el nombre original del archivo transferido
+INFO:root:MAIN: Ejecucion terminada
