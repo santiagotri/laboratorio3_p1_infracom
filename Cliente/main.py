@@ -69,7 +69,7 @@ barrera.reset()
 while barrera.n_waiting != numClientes:
     pass
 
-imprimir("Se han recibido todos los archivos. Se verificará Integridad para cada cliente.")
+imprimir("Se han recibido todos los archivos.")
 barrera.wait()
 barrera.reset()
 
