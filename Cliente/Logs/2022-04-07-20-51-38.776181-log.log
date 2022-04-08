@@ -1,0 +1,20 @@
+INFO:root:MAIN: creando 3 clientes
+INFO:root:CLIENTE 0: creado. Entrando en espera
+INFO:root:CLIENTE 1: creado. Entrando en espera
+INFO:root:CLIENTE 2: creado. Entrando en espera
+INFO:root:MAIN: Se han creado correctamente todos los clientes, iniciando las conexiones en 5 segundos. Cada conexion será lanzada con 1 segundo(s) de diferencia
+INFO:root:CLIENTE 0: Iniciando proceso de conexion
+INFO:root:CLIENTE 0: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 0: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 0: Esperando al envio de un archivo
+INFO:root:CLIENTE 1: Iniciando proceso de conexion
+INFO:root:CLIENTE 1: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 1: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 1: Esperando al envio de un archivo
+INFO:root:CLIENTE 2: Iniciando proceso de conexion
+INFO:root:CLIENTE 2: Intentando enviar mensaje a  usando el puerto 12345
+INFO:root:CLIENTE 2: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 2: Esperando al envio de un archivo
+INFO:root:CLIENTE 0: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 2: Recibiendo archivo 100MB.bin de tamaño 104857600
+INFO:root:CLIENTE 1: Recibiendo archivo 100MB.bin de tamaño 104857600

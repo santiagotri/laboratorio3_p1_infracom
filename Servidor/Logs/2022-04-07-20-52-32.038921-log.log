@@ -1,0 +1,9 @@
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:51619
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:53847
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:57939
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'

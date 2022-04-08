@@ -1,0 +1,15 @@
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:50130
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:63764
+INFO:root:Server listening in localhost 12345
+INFO:root:[+] Nuevo cliente en: 127.0.0.1:53294
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:b'Enviando el archivo 100MB.bin de tamano 104857600'
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:130.17segundos - Tasa_transferencia_promedio:805541.368B/s
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:130.198segundos - Tasa_transferencia_promedio:805371.086B/s
+INFO:root:Se envio correctamente el archivo principal !
+INFO:root:Total_de_bytes_recibidos:104857600 - Tiempo_tranferencia:130.208segundos - Tasa_transferencia_promedio:805306.097B/s
