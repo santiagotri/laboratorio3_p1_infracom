@@ -1,0 +1,29 @@
+INFO:root:MAIN: creando 3 clientes
+INFO:root:CLIENTE 0: creado. Entrando en espera
+INFO:root:CLIENTE 1: creado. Entrando en espera
+INFO:root:CLIENTE 2: creado. Entrando en espera
+INFO:root:MAIN: Se han creado correctamente todos los clientes, iniciando las conexiones en 5 segundos. Cada conexion será lanzada con 1 segundo(s) de diferencia
+INFO:root:CLIENTE 0: Iniciando proceso de conexion
+INFO:root:CLIENTE 0: Intentando enviar mensaje a 192.168.0.182 usando el puerto 12345
+INFO:root:CLIENTE 0: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 0: Esperando al envio de un archivo
+INFO:root:CLIENTE 1: Iniciando proceso de conexion
+INFO:root:CLIENTE 1: Intentando enviar mensaje a 192.168.0.182 usando el puerto 12345
+INFO:root:CLIENTE 1: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 1: Esperando al envio de un archivo
+INFO:root:CLIENTE 2: Iniciando proceso de conexion
+INFO:root:CLIENTE 2: Intentando enviar mensaje a 192.168.0.182 usando el puerto 12345
+INFO:root:CLIENTE 2: Mensaje enviado exitosamente! Esperando al envio por parte del servidor
+INFO:root:CLIENTE 2: Esperando al envio de un archivo
+INFO:root:CLIENTE 2: Recibiendo archivo 250MB.bin de tamaño 262144000
+INFO:root:CLIENTE 0: Recibiendo archivo 250MB.bin de tamaño 262144000
+INFO:root:CLIENTE 1: Recibiendo archivo 250MB.bin de tamaño 262144000
+INFO:root:CLIENTE 1: Escribiendo archivo en disco...
+INFO:root:CLIENTE 2: Escribiendo archivo en disco...
+INFO:root:CLIENTE 0: Escribiendo archivo en disco...
+INFO:root:MAIN: Se han recibido todos los archivos.
+INFO:root:CLIENTE 0: Total_de_bytes_recibidos:180464640 - Tiempo_tranferencia:388.25segundos - Tasa_transferencia_promedio:675194.163B/s
+INFO:root:CLIENTE 1: Total_de_bytes_recibidos:175812608 - Tiempo_tranferencia:378.672segundos - Tasa_transferencia_promedio:692271.404B/s
+INFO:root:CLIENTE 2: Total_de_bytes_recibidos:173142016 - Tiempo_tranferencia:380.777segundos - Tasa_transferencia_promedio:688444.364B/s
+INFO:root:MAIN: Los archivos transferidos exitosamente fueron almacenados en "archivos_recibidos/clienteX_Y", donde X es el numero del cliente y Y el nombre original del archivo transferido
+INFO:root:MAIN: Ejecucion terminada
